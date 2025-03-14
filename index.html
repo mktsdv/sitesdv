@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saberes da Vida</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="./img/logo.webp" width="80"></div>
+        <div id="title"><h2>Saberes da Vida</h2></div>
+        <div id="navmenu">
+            <nav>
+                <div class="menu-icon" id="menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#lider">Liderança</a></li>
+                    <li><a href="#fotos">Fotos</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="flex-container">
+            <iframe style="max-width:80%;min-height:600px;width:600px;"  src="https://www.youtube.com/embed/olbve30FhcI?si=aJ9qXuiJc0C9BlXe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="sobre" class="flex-container">
+            <div><h2>Sobre Nós</h2></div>
+            <div><img src="./img/logo.webp" height="300px"></div>
+            <div><p>A ONG Saberes da Vida busca promover conhecimento e bem-estar para comunidades em situação de vulnerabilidade.</p></div>
+        </section>
+        <section id="lider" class="flex-container">
+            <div>
+                <h2>TRANSFORMAÇÃO E PROPÓSITO:</h2>
+                <h1>OPORTUNIDADE QUE TIVE... À MUDANÇAS DE OUTRAS VIDAS!</h1></div>
+            <div>
+                <p id="bio">Fabiano Alcântara Alves nasceu em Santa Maria do Suaçuí, Minas Gerais, e desde cedo desenvolveu um olhar sensível para as necessidades sociais ao seu redor. Aos 12 anos, começou sua trajetória no voluntariado, participando do grupo de jovens da Igreja Matriz de sua cidade, onde organizava arrecadações de alimentos, agasalhos e itens de higiene para famílias em situação de vulnerabilidade. Esse primeiro contato com ações sociais despertou nele um profundo senso de propósito e empatia.
+                </p>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/fabiano020276/" target="_blank" rel="noreferrer noopener">
+                    <img src="./img/fabiano.webp" id="photo">
+                </a>
+            </div> 
+        </section>
+        <section id="fotos" class="flex-container">
+            <div class="carrossel">
+                <div class="carrossel-container">
+                    <div class="carrossel-item">
+                        <img src="./img/img (9).webp" alt="Imagem 1"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="./img/img (8).webp" alt="Imagem 2"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="./img/img (6).webp" alt="Imagem 3"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
+                    </div>
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <button class="carrossel-btn prev" onclick="moverCarrossel(-1)">&#10094;</button>
+                <button class="carrossel-btn next" onclick="moverCarrossel(1)">&#10095;</button>
+            </div>
+        </section>
+        <section id="projetos" class="flex-container">
+            <h1>Nossos Projetos</h1><br>
+                <div>
+                        <a href="https://www.instagram.com/saberesdavida.sdv/" target="_blank" rel="noreferrer noopener">
+                        
+                            <img src="./img/instagram.webp" width="80"></a>
+                            <button onclick="document.location='https://www.instagram.com/saberesdavida.sdv/'" target="_blank" id="instabutton">Nosso Instagram
+                            </button>
+                        
+                    </div> <br>
+            </a>
+            <p>Conheça os projetos sociais que desenvolvemos para impactar positivamente a sociedade.</p>
+        </section>
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form action="https://formspree.io/f/xanqogrp" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer><p>
+        &copy; 2025 Saberes da Vida. Todos os direitos reservados.
+    </p>
+    </footer>
+</body>
+</html>
