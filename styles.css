@@ -81,8 +81,10 @@ section {
     text-align: center;
     font-size: 1.5em;
     color: white;
-    padding: 40px 10px 10px 10px;
+    padding: 10vh 10px 10px 10px;
     overflow: hidden;
+    scroll-snap-align: start;
+    color: white;
 }
 
 #lider {
@@ -208,16 +210,6 @@ main {
     scrollbar-width: none;
 }
 
-section {
-    height: 100%;
-    scroll-snap-align: start;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    color: white;
-}
-
 section:nth-child(odd) {
     background-color: #555;
 }
@@ -237,11 +229,13 @@ form {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     align-items: center;
 }
+
 label {
     margin-top: 10px;
     font-weight: 600;
     color: black;
 }
+
 input, textarea {
     width: 95%;
     padding: 10px;
@@ -250,10 +244,12 @@ input, textarea {
     border-radius: 5px;
     align-items: center;
 }
+
 textarea {
     height: 200px;
     resize: vertical;
 }
+
 button {
     margin-top: 15px;
     padding: 15px;
