@@ -35,7 +35,7 @@ body, html {
 }
 
 .flex-row {
-    display: flex;
+    display: inline;
     flex-direction: row;
     align-items: center;
     justify-content: center;
