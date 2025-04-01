@@ -86,20 +86,27 @@ section {
 }
 
 #lider {
+    padding-top: 40px;
     flex-direction: column;
     align-content: space-evenly;
     background-color: #8f644c;
 }
 
 #lider-resumo {
+    display: inline-flex;
     flex-direction: row;
     align-content: space-evenly;
     background-color: #8f644c;
+    max-width: 80%;
 }
 
 #bio{
     padding: 0px 10px;
-    max-width: 50%;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: .3em;
 }
 
 #photo{
