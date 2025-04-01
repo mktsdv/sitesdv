@@ -102,11 +102,11 @@ section {
 
 #bio{
     padding: 0px 10px;
-    max-width: 50%;
+    max-width: 80%;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    font-size: .3em;
+    font-size: .5em;
 }
 
 #photo{
