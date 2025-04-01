@@ -33,6 +33,14 @@ body, html {
     align-items: center;
     justify-content: center;
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 header {
     height: 10vh;
     width: 100%;
@@ -82,6 +90,13 @@ section {
     align-content: space-evenly;
     background-color: #8f644c;
 }
+
+#lider-resumo {
+    flex-direction: row;
+    align-content: space-evenly;
+    background-color: #8f644c;
+}
+
 #bio{
     padding: 0px 10px;
 }
@@ -202,7 +217,6 @@ section:nth-child(odd) {
 section:nth-child(even) {
     background-color: #777;
 }
-
 
 form {
     display: flex;
