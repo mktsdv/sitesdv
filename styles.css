@@ -99,7 +99,9 @@ section {
     flex-direction: row;
     align-content: space-evenly;
     background-color: #8f644c;
-    max-width: 80%;
+    max-width: 90vw;
+    max-height: 75%;
+    padding: 0;
 }
 
 #bio{
