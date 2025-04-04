@@ -117,7 +117,7 @@ section {
 }
 
 #photo-lider {
-    max-width: 60vh;
+    max-width: 50vh;
     object-fit: scale-down;
 }
 #title{
@@ -225,6 +225,7 @@ form {
     flex-direction: column;
     width: 50%;
     max-width: 600px;
+    max-height: 70vh;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -275,6 +276,7 @@ button:hover {
     width: 80%;
     height: 80%;
     max-width: 600px;
+    max-height: 70vh;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
