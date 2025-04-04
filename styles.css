@@ -346,6 +346,9 @@ figcaption {
         margin: 0;
         overflow: hidden;
     }
+    #logo {
+    max-width: 50%;
+}
     .menu-icon {
         display: flex;
     }
