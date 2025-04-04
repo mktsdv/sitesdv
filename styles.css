@@ -424,12 +424,7 @@ figcaption {
     p {
         font-size: .7rem;
     }
-    #photo{
-        max-width: 100%;
-        max-height: 600px;
-        object-fit: scale-down;
-        width: 100%;
-    }
+    
     figcaption{
         max-width: 100%;
         font-size: .7rem;
@@ -442,11 +437,14 @@ figcaption {
       display: inline-grid;
       align-items: center;
       justify-content: center;
+      max-height: 70vh;
     }
 
     #bio, #photo, #photo-lider {
       flex: 0 0 100%;
       max-width: 100%;
       font-size: .75rem;
+        max-height: 600px;
+        object-fit: scale-down;
     }
 }
