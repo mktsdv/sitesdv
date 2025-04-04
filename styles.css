@@ -116,6 +116,9 @@ section {
   align-items: center;
 }
 
+#photo-lider {
+    max-width: 600px;
+}
 #title{
     min-width: 30vw;
     text-align: center;
@@ -433,14 +436,14 @@ figcaption {
         z-index: 1000;
     }
     #lider-resumo {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
 
-#bio, #photo {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
+    #bio, #photo {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
 }
