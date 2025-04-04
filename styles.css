@@ -118,6 +118,7 @@ section {
 
 #photo-lider {
     max-width: 600px;
+    object-fit: scale-down;
 }
 #title{
     min-width: 30vw;
