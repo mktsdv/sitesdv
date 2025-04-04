@@ -126,6 +126,7 @@ section {
 }
 #logo {
     padding: 1rem;
+    width: 80px;
 }
 #navmenu {
     padding-right: 5vw;
