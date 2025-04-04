@@ -1,52 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-html {
-    font-size: 100%; /* 16px padrão */
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+h1 {
+    font-size: 2vw;
 }
 
 body, html {
     height: 100vh;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-behavior: smooth;
 }
-
-h1 {
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    font-weight: 600;
-}
-
-h2 {
-    font-size: clamp(1.2rem, 3vw, 2.5rem);
-    font-weight: 400;
-}
-
-p, label, input, textarea, button {
-    font-size: 1rem;
-}
-
-button {
-    font-size: 1.1rem;
-}
-
-figcaption {
-    font-size: 0.875rem;
-}
-
-footer {
-    font-size: 0.9rem;
-}
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -55,7 +31,7 @@ footer {
 }
 
 .flex-row {
-    display: flex;
+    display: inline;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -67,6 +43,7 @@ header {
     background-color: #0f4a7a;
     color: white;
     display: flex;
+    flex-direction: line;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -80,6 +57,9 @@ footer {
     background-color: #0f4a7a;
     color: white;
     display: flex;
+    flex-direction: line;
+    justify-content: space-between;
+    align-items: center;
     justify-content: center;
     position: fixed;
     bottom: 0;
@@ -92,92 +72,91 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-content: space-between;
     text-align: center;
+    font-size: 1.5em;
+    color: white;
     padding: 10vh 10px 10px 10px;
     overflow: hidden;
     scroll-snap-align: start;
     color: white;
-    font-size: 1.5rem;
 }
 
 #lider {
     padding-top: 40px;
+    flex-direction: column;
+    align-content: space-evenly;
     background-color: #8f644c;
 }
 
 #lider-resumo {
     display: flex;
     flex-direction: row;
+    align-content: space-evenly;
     background-color: #8f644c;
     max-width: 90vw;
     max-height: 75%;
     padding: 0;
+    flex-wrap: nowrap;
 }
 
-#bio {
+#bio{
     padding: 0px 10px;
-    max-width: 80%;
+    width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    font-size: 0.875rem;
+    font-size: .5em;
 }
 
-#photo {
-    max-width: 50%;
+#photo{
+    width: 70%;
     max-height: 600px;
     object-fit: scale-down;
 }
 
-#title {
+#title{
     min-width: 30vw;
     text-align: center;
 }
-
 #logo {
     padding: 1rem;
 }
-
 #navmenu {
     padding-right: 5vw;
     padding-bottom: 10px;
     justify-items: end;
 }
-
-#home {
+#home{
     background-color: #dad266;
 }
-
 #sobre {
     background-color: #ff5733;
     padding: 0px 30px;
 }
-
 #fotos {
     background-color: #eeabdd;
 }
-
 #projetos {
     background-color: #33c3ff;
     padding: 0px 50px;
 }
-
 #contato {
     background-color: #60bd71;
 }
-
 #instabutton {
-    font-size: 1.25rem;
+    font-size: 20px;
     border-radius: 10px;
-    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-line: none;
     color: white;
     background-color: #6fd3ce;
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-content: center;
     text-align: center;
 }
-
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -199,8 +178,10 @@ section {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: line;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-align: left;
     align-items: center;
 }
 
@@ -219,7 +200,6 @@ section {
 .menu li a:hover {
     color: #ffcc00;
 }
-
 main {
     height: 100vh;
     overflow-y: scroll;
@@ -259,6 +239,7 @@ input, textarea {
     margin-top: 5px;
     border: 2px solid #ccc;
     border-radius: 5px;
+    align-items: center;
 }
 
 textarea {
@@ -275,13 +256,15 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 1.2em;
+    display: block;
     width: 100%;
 }
-
 button:hover {
     background-color: #444;
 }
 
+/*CARROSSEL DE FOTOS*/
 .carrossel {
     position: relative;
     width: 80%;
@@ -291,16 +274,18 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 figcaption {
     color: black;
     width: 50%;
     padding: 7px;
     background-color: whitesmoke;
     text-align: center;
+    align-content: space-between;
     position: absolute;
+    font-size: .5em;
+    
     border-radius: 100px;
-}
+  }
 
 .carrossel-container {
     display: flex;
@@ -330,7 +315,7 @@ figcaption {
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 0.875rem;
+    font-size: 0.5em;
     width: 1rem;
     text-align: center;
     padding-right: 4%;
@@ -348,11 +333,12 @@ figcaption {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Estilos para mobile */
 @media (max-width: 768px) {
-    html {
-        font-size: 90%;
+    body{
+        margin: 0;
+        overflow: hidden;
     }
-
     .menu-icon {
         display: flex;
     }
@@ -381,6 +367,9 @@ figcaption {
 
     section {
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
         padding-top: 10vh;
         padding-bottom: 5vh;
     }
@@ -388,23 +377,69 @@ figcaption {
     form {
         width: 80%;
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: .8rem;
     }
 
     .carrossel {
         width: 90%;
         max-height: 70vh;
     }
-
-    figcaption {
-        font-size: 0.75rem;
-        bottom: 40%;
-        background-color: white;
-        max-width: 100%;
-        z-index: 1000;
+    header {
+        height: 10vh;
+        width: 100%;
+        background-color: #0f4a7a;
+        color: white;
+        display: flex;
+        flex-direction: line;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
     }
 
     footer {
-        font-size: 0.8rem;
+        height: 5vh;
+        width: 100%;
+        background-color: #0f4a7a;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 0.9em;
+        position: fixed;
+        bottom: 0;
+    }
+
+    h1 {
+        font-size: .7em;
+    }
+    h2 {
+        font-size: .8em;
+    }
+    p {
+        font-size: .7rem;
+    }
+    #photo{
+        max-width: 100%;
+        max-height: 600px;
+        object-fit: scale-down;
+        width: 100%;
+    }
+    figcaption{
+        max-width: 100%;
+        font-size: .7rem;
+        color: black;
+        background-color: white;
+        bottom: 40%;
+        z-index: 1000;
+    }
+    #lider-resumo {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    #bio {
+        width: 100%;
+        padding: 10px 0;
+    }
+    #photo {
+        width: 100%;
     }
 }
