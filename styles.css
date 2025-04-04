@@ -439,14 +439,14 @@ figcaption {
         z-index: 1000;
     }
     #lider-resumo {
-      flex-direction: column;
-      flex-wrap: wrap;
+      display: inline-grid;
       align-items: center;
       justify-content: center;
     }
 
-    #bio, #photo {
+    #bio, #photo, #photo-lider {
       flex: 0 0 100%;
       max-width: 100%;
+      font-size: .75rem;
     }
 }
