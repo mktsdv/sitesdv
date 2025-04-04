@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html {
+    font-size: 100%; /* 16px padrão */
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    font-weight: 400;
+}
+
+p, label, input, textarea, button {
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1.1rem;
+}
+
+figcaption {
+    font-size: 0.875rem;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    background-color: #0f4a7a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    height: 5vh;
+    width: 100%;
+    background-color: #0f4a7a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10vh 10px 10px 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#lider {
+    padding-top: 40px;
+    background-color: #8f644c;
+}
+
+#lider-resumo {
+    display: flex;
+    flex-direction: row;
+    background-color: #8f644c;
+    max-width: 90vw;
+    max-height: 75%;
+    padding: 0;
+}
+
+#bio {
+    padding: 0px 10px;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 0.875rem;
+}
+
+#photo {
+    max-width: 50%;
+    max-height: 600px;
+    object-fit: scale-down;
+}
+
+#title {
+    min-width: 30vw;
+    text-align: center;
+}
+
+#logo {
+    padding: 1rem;
+}
+
+#navmenu {
+    padding-right: 5vw;
+    padding-bottom: 10px;
+    justify-items: end;
+}
+
+#home {
+    background-color: #dad266;
+}
+
+#sobre {
+    background-color: #ff5733;
+    padding: 0px 30px;
+}
+
+#fotos {
+    background-color: #eeabdd;
+}
+
+#projetos {
+    background-color: #33c3ff;
+    padding: 0px 50px;
+}
+
+#contato {
+    background-color: #60bd71;
+}
+
+#instabutton {
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #6fd3ce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.menu {
+    min-width: 30vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 20px;
+    padding-top: 1em;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+
+section:nth-child(odd) {
+    background-color: #555;
+}
+
+section:nth-child(even) {
+    background-color: #777;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: 600;
+    color: black;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #999595;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.carrossel {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    color: black;
+    width: 50%;
+    padding: 7px;
+    background-color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    border-radius: 100px;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-item {
+    min-width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.carrossel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carrossel-btn {
+    position: absolute;
+    bottom: 7%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    width: 1rem;
+    text-align: center;
+    padding-right: 4%;
+}
+
+.carrossel-btn.prev {
+    right: 51%;
+}
+
+.carrossel-btn.next {
+    left: 51%;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 90%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 4px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu li a {
+        padding: 10px 20px;
+    }
+
+    section {
+        height: 100vh;
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+    }
+
+    form {
+        width: 80%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .carrossel {
+        width: 90%;
+        max-height: 70vh;
+    }
+
+    figcaption {
+        font-size: 0.75rem;
+        bottom: 40%;
+        background-color: white;
+        max-width: 100%;
+        z-index: 1000;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
