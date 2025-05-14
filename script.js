@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let sectionHeight = window.innerHeight * 0.8;
     let isScrolling = false;
     let startY = 0;
+
     ///////////// Carrossel seção inicial
-    
     let angle = 0;
     let currentIndex = 0;
     const carousel = document.getElementById("carousel");
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".controls button:nth-child(1)").addEventListener("click", () => rotateCarousel(-1));
     document.querySelector(".controls button:nth-child(2)").addEventListener("click", () => rotateCarousel(1));
   });
+
 
     // Atualiza altura das seções em redimensionamento
     window.addEventListener('resize', () => {
@@ -122,8 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // OPCIONAL: prevenir scroll padrão da página se necessário
     // document.body.style.overflow = 'hidden';
-});
-
 // CARROSSEL DE FOTOS
 let currentIndex = 0;
 
