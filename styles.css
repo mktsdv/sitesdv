@@ -30,8 +30,10 @@ elfsight {
 }
 
 .carousel-container {
-      width: 300px;
-      height: 300px;
+      width: 80vw;
+      max-width: 300px;
+      height: 80vw;
+      max-height: 300px;
       position: relative;
       transform-style: preserve-3d;
       transition: transform 1s ease;
@@ -39,8 +41,8 @@ elfsight {
 
     .circle {
       position: absolute;
-      width: 200px;
-      height: 200px;
+      width: 66%;
+      height: 66%;
       border-radius: 50%;
       background: white;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -48,33 +50,35 @@ elfsight {
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .circle:nth-child(1) {
-      transform: rotateY(0deg) translateZ(300px);
+      transform: rotateY(0deg) translateZ(150px);
       background-color: #cce5ff;
     }
 
     .circle:nth-child(2) {
-      transform: rotateY(120deg) translateZ(300px);
+      transform: rotateY(120deg) translateZ(150px);
       background-color: #d4edda;
     }
 
     .circle:nth-child(3) {
-      transform: rotateY(240deg) translateZ(300px);
+      transform: rotateY(240deg) translateZ(150px);
       background-color: #fff3cd;
     }
 
     .controls {
-      margin-top: 30px;
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .controls button {
       padding: 10px 20px;
-      margin: 0 10px;
       font-size: 1rem;
       border: none;
       background-color: #007bff;
@@ -82,10 +86,24 @@ elfsight {
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s ease;
+      flex: 1 1 120px;
     }
 
     .controls button:hover {
       background-color: #0056b3;
+    }
+
+    /* Responsividade extra para telas muito pequenas */
+    @media (max-width: 400px) {
+      .circle {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+
+      .controls button {
+        font-size: 0.9rem;
+        padding: 8px;
+      }
     }
 
 .flex-container {
