@@ -129,4 +129,4 @@ function moverCarrossel(direction) {
     const offset = -currentIndex * 100;
     container.style.transform = `translateX(${offset}%)`;
 }
-}
+})
