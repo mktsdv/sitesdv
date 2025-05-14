@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let startY = 0;
 
     ///////////// Carrossel seção inicial
-    document.addEventListener('DOMContentLoaded', () => {
+
   const carousel = document.getElementById("carousel");
   const cards = document.querySelectorAll(".card");
   const dots = document.querySelectorAll(".dot");
@@ -129,4 +129,3 @@ function moverCarrossel(direction) {
     const offset = -currentIndex * 100;
     container.style.transform = `translateX(${offset}%)`;
 }
-})
