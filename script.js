@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0;
   const carousel = document.getElementById("carousel");
   const cards = document.querySelectorAll(".card");
+  const dots = document.querySelectorAll(".dot");
 
   function rotateCarousel(direction) {
     currentIndex = (currentIndex + direction + cards.length) % cards.length;
@@ -26,12 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.add("active");
       }
     });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
   }
 
-  // Rotação automática a cada 10 segundos
+  // Rotação automática
   let autoRotateInterval = setInterval(() => {
     rotateCarousel(1);
   }, 10000);
+
+  function resetAutoRotate() {
+    clearInterval(autoRotateInterval);
+    autoRotateInterval = setInterval(() => {
+      rotateCarousel(1);
+    }, 10000);
+  }
+
+  // Pausar ao passar o mouse
+  carousel.addEventListener("mouseenter", () => clearInterval(autoRotateInterval));
+  carousel.addEventListener("mouseleave", () => resetAutoRotate());
 
   // Reinicia o temporizador se o usuário interagir
   function resetAutoRotate() {
