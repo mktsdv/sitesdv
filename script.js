@@ -7,11 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let startY = 0;
     ///////////// Carrossel seção inicial
     let angle = 0;
+    let currentIndex = 0;
     const carousel = document.getElementById("carousel");
+    const cards = document.querySelectorAll(".card");
 
     function rotateCarousel(direction) {
+      currentIndex = (currentIndex + direction + cards.length) % cards.length;
       angle += direction * 120;
       carousel.style.transform = `rotateY(${angle}deg)`;
+      updateCards();
+    }
+
+    function updateCards() {
+      cards.forEach((card, index) => {
+        card.classList.remove("active");
+        if (index === currentIndex) {
+          card.classList.add("active");
+        }
+      });
     }
 
     // Atualiza altura das seções em redimensionamento
