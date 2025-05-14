@@ -110,6 +110,26 @@ elfsight {
       background-color: #0056b3;
     }
 
+    .indicators {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+
     @media (max-width: 600px) {
       .card h2 {
         font-size: 1.4rem;
