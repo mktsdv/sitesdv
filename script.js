@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let sectionHeight = window.innerHeight * 0.8;
     let isScrolling = false;
     let startY = 0;
+    ///////////// Carrossel seção inicial
+    let angle = 0;
+    const carousel = document.getElementById("carousel");
+
+    function rotateCarousel(direction) {
+      angle += direction * 120;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+    }
 
     // Atualiza altura das seções em redimensionamento
     window.addEventListener('resize', () => {
