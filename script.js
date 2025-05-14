@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isScrolling = false;
     let startY = 0;
     ///////////// Carrossel seção inicial
-    document.addEventListener("DOMContentLoaded", function () {
+    
     let angle = 0;
     let currentIndex = 0;
     const carousel = document.getElementById("carousel");
