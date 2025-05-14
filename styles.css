@@ -29,9 +29,9 @@ elfsight {
 }
 
 .carousel-container {
-      width: 90vw;
+      width: 70vw;
       max-width: 600px;
-      height: 80vh;
+      height: 60vh;
       position: relative;
       transform-style: preserve-3d;
       transition: transform 1s ease;
@@ -54,6 +54,7 @@ elfsight {
       transform: scale(0.9);
       transition: opacity 0.6s ease, transform 0.6s ease;
       overflow-y: auto;
+      backface-visibility: hidden;
     }
 
     .card.active {
@@ -74,17 +75,17 @@ elfsight {
     }
 
     .card:nth-child(1) {
-      transform: rotateY(0deg) translateZ(400px);
+      transform: rotateY(0deg) translateZ(500px);
       background-color: #cce5ff;
     }
 
     .card:nth-child(2) {
-      transform: rotateY(120deg) translateZ(400px);
+      transform: rotateY(120deg) translateZ(500px);
       background-color: #d4edda;
     }
 
     .card:nth-child(3) {
-      transform: rotateY(240deg) translateZ(400px);
+      transform: rotateY(240deg) translateZ(500px);
       background-color: #fff3cd;
     }
 
