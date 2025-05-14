@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-icon');
-    const menu = document.getElementById('menu');
-    const main = document.querySelector('main');
     let sectionHeight = window.innerHeight * 0.8;
     let isScrolling = false;
     let startY = 0;
