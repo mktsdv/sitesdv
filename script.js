@@ -7,53 +7,55 @@ document.addEventListener('DOMContentLoaded', () => {
     let startY = 0;
 
     ///////////// Carrossel seção inicial
-    let angle = 0;
-    let currentIndex = 0;
     const carousel = document.getElementById("carousel");
     const cards = document.querySelectorAll(".card");
     const dots = document.querySelectorAll(".dot");
+    let angle = 0;
+    let currentIndex = 0;
 
     function rotateCarousel(direction) {
-      currentIndex = (currentIndex + direction + cards.length) % cards.length;
-      angle += direction * 120;
-      carousel.style.transform = `rotateY(${angle}deg)`;
-      updateCards();
-      resetAutoRotate();
+        currentIndex = (currentIndex + direction + cards.length) % cards.length;
+        angle = (angle + direction * 120) % 360; // Limita a rotação entre 0 e 360 graus
+        carousel.style.transform = `rotateY(${angle}deg)`;
+        updateCards();
+        resetAutoRotate();
     }
 
     function updateCards() {
-      cards.forEach((card, index) => {
-        card.classList.remove("active");
-        if (index === currentIndex) {
-          card.classList.add("active");
-        }
-      });
+        cards.forEach((card, index) => {
+            card.classList.remove("active");
+            if (index === currentIndex) card.classList.add("active");
+        });
 
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-      });
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
     }
 
-    // Rotação automática
     let autoRotateInterval = setInterval(() => {
-      rotateCarousel(1);
+        rotateCarousel(1);
     }, 10000);
 
     function resetAutoRotate() {
-      clearInterval(autoRotateInterval);
-      autoRotateInterval = setInterval(() => {
-        rotateCarousel(1);
-      }, 10000);
+        clearInterval(autoRotateInterval);
+        autoRotateInterval = setInterval(() => {
+            rotateCarousel(1);
+        }, 10000);
     }
 
-    // Pausar ao passar o mouse
-    carousel.addEventListener("mouseenter", () => clearInterval(autoRotateInterval));
-    carousel.addEventListener("mouseleave", () => resetAutoRotate());
+    if (carousel) {
+        carousel.addEventListener("mouseenter", () => clearInterval(autoRotateInterval));
+        carousel.addEventListener("mouseleave", () => resetAutoRotate());
+    }
 
-    // Conecta botões com função
-    document.querySelector(".controls button:nth-child(1)").addEventListener("click", () => rotateCarousel(-1));
-    document.querySelector(".controls button:nth-child(2)").addEventListener("click", () => rotateCarousel(1));
-  });
+    const prevBtn = document.querySelector(".controls button:nth-child(1)");
+    const nextBtn = document.querySelector(".controls button:nth-child(2)");
+
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener("click", () => rotateCarousel(-1));
+        nextBtn.addEventListener("click", () => rotateCarousel(1));
+    }
+});
 
 
     // Atualiza altura das seções em redimensionamento
