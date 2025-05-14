@@ -53,6 +53,15 @@
     <button onclick="rotateCarousel(-1)">Anterior</button>
     <button onclick="rotateCarousel(1)">Próximo</button>
   </div>
+		<script>
+    let angle = 0;
+    const carousel = document.getElementById("carousel");
+
+    function rotateCarousel(direction) {
+      angle += direction * 120;
+      carousel.style.transform = `rotateY(${angle}deg)`;
+    }
+  </script>
         </section>
         <section id="sobre" class="flex-container">
             <div><h2>Sobre Nós</h2></div>
