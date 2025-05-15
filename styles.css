@@ -27,136 +27,98 @@ body, html {
 elfsight {
     max-height: 60%;
 }
-
 .carousel-wrapper {
-  position: relative;
-  width: 80vw;
-  height: 60vh;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 80vh;
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
 
-#carousel {
-  width: 70%;
-  height: 70%;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-  position: relative;
-}
+    #carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
-.card {
-    width: 80%;
-    height: 80%;
-    transform-style: preserve-3d;
-    transition: transform 1s ease, opacity 0.5s ease;
-    opacity: 0.3; /* Cartões não ativos começam com opacidade reduzida */
-    visibility: hidden; /* Cartões não ativos começam invisíveis */
-}
+    .card {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.9);
+      transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+      overflow-y: auto;
+    }
 
-.card.active {
-    opacity: 1; /* Cartão ativo se torna totalmente opaco */
-    visibility: visible; /* Cartão ativo se torna visível */
-    transform: rotateY(0deg); /* Cartão ativo em 0 grau */
-}
-
-.card:nth-child(1) {
-    transform: rotateY(0deg);
-}
-
-.card:nth-child(2) {
-    transform: rotateY(120deg);
-}
-
-.card:nth-child(3) {
-    transform: rotateY(240deg);
-}
-
-
+    .card.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      z-index: 10;
+    }
 
     .card h2 {
-      font-size: 1.6rem;
+      margin-bottom: 1rem;
       color: #333;
-      margin-bottom: 10px;
     }
 
-    .card p {
+    .card p, .card ul {
       font-size: 1rem;
       color: #555;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    
+    .card ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+    }
 
-    .controls {
-      margin-top: 20px;
+    .controls, .dots {
       display: flex;
-      gap: 10px;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
     .controls button {
-      padding: 10px 20px;
-      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
       border: none;
-      background-color: #007bff;
+      background-color: #333;
       color: white;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
-      flex: 1 1 120px;
     }
 
     .controls button:hover {
-      background-color: #0056b3;
+      background-color: #555;
     }
 
-    .indicators {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  justify-content: center;
-}
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #bbb;
+    }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #007bff;
-}
-
+    .dot.active {
+      background: #333;
+    }
 
     @media (max-width: 600px) {
-      .card h2 {
-        font-size: 1.4rem;
-      }
-
-      .card p {
-        font-size: 0.95rem;
-      }
-    }
-
-    @media (max-width: 400px) {
       .card {
-        padding: 20px;
-      }
-
-      .card h2 {
-        font-size: 1.2rem;
-      }
-
-      .card p {
+        padding: 1rem;
         font-size: 0.9rem;
-      }
-
-      .controls button {
-        font-size: 0.9rem;
-        padding: 8px;
       }
     }
 
