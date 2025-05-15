@@ -28,6 +28,16 @@ elfsight {
     max-height: 60%;
 }
 .carousel-wrapper {
+<<<<<<< HEAD
+  position: relative;
+  width: 70vw;
+  height: 50vh;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+=======
       position: relative;
       width: 100%;
       max-width: 800px;
@@ -38,6 +48,7 @@ elfsight {
       align-items: center;
       margin-bottom: 2rem;
     }
+>>>>>>> 4c1517ff4895cf12ac46a412ec2930e93ab90ddf
 
     #carousel {
       width: 100%;
@@ -119,8 +130,36 @@ elfsight {
       background: #bbb;
     }
 
+<<<<<<< HEAD
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+
+    @media (max-width: 600px) {
+        .carousel-wrapper {
+            width: 60vw;
+            height: 40vh;
+        }
+      .card h2 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+=======
     .dot.active {
       background: #333;
+>>>>>>> 4c1517ff4895cf12ac46a412ec2930e93ab90ddf
     }
 
     @media (max-width: 600px) {
