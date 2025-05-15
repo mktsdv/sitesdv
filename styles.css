@@ -502,6 +502,7 @@ figcaption {
     .carousel-wrapper {
             width: 80vw;
             height: 80vh;
+            padding-top: 20vh;
         }
       .card h2 {
         font-size: 1.4rem;
