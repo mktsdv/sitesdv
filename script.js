@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
 
     menuIcon.addEventListener('click', function() {
-        menu.classList.toggle('active')
+        menu.classList.toggle('active')});
 
     ///////////// Carrossel seção inicial
 
@@ -127,4 +127,4 @@ function moverCarrossel(direction) {
 
     const offset = -currentIndex * 100;
     container.style.transform = `translateX(${offset}%)`;
-}})
+}
