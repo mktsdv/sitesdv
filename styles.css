@@ -47,25 +47,32 @@ elfsight {
 }
 
 .card {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0.9);
-  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
+    width: 80%;
+    height: 80%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease, opacity 0.5s ease;
+    opacity: 0.3; /* Cartões não ativos começam com opacidade reduzida */
+    visibility: hidden; /* Cartões não ativos começam invisíveis */
 }
 
 .card.active {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  z-index: 10;
+    opacity: 1; /* Cartão ativo se torna totalmente opaco */
+    visibility: visible; /* Cartão ativo se torna visível */
+    transform: rotateY(0deg); /* Cartão ativo em 0 grau */
 }
+
+.card:nth-child(1) {
+    transform: rotateY(0deg);
+}
+
+.card:nth-child(2) {
+    transform: rotateY(120deg);
+}
+
+.card:nth-child(3) {
+    transform: rotateY(240deg);
+}
+
 
 
     .card h2 {
@@ -80,20 +87,7 @@ elfsight {
       line-height: 1.5;
     }
 
-    .card:nth-child(1) {
-      transform: rotateY(0deg) translateZ(500px);
-      background-color: #cce5ff;
-    }
-
-    .card:nth-child(2) {
-      transform: rotateY(120deg) translateZ(500px);
-      background-color: #d4edda;
-    }
-
-    .card:nth-child(3) {
-      transform: rotateY(240deg) translateZ(500px);
-      background-color: #fff3cd;
-    }
+    
 
     .controls {
       margin-top: 20px;
