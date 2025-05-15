@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ///////////// Carrossel seção inicial
 
-  const carousel = document.getElementById("carousel");
+  let angle = 0;
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
     const cards = document.querySelectorAll(".card");
     const dots = document.querySelectorAll(".dot");
-    let angle = 0;
-    let currentIndex = 0;
 
     function rotateCarousel(direction) {
         currentIndex = (currentIndex + direction + cards.length) % cards.length;
-        angle = (angle + direction * 120) % 360; // Limita a rotação entre 0 e 360 graus
+        angle += direction * 120;
         carousel.style.transform = `rotateY(${angle}deg)`;
         updateCards();
         resetAutoRotate();
@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         prevBtn.addEventListener("click", () => rotateCarousel(-1));
         nextBtn.addEventListener("click", () => rotateCarousel(1));
     }
+
+    // Continua com o restante do seu código normalmente (MENU, SCROLL etc.)
 });
 
 
