@@ -121,7 +121,15 @@ elfsight {
 
     @media (max-width: 600px) {
       .card {
-        padding: 1rem;
+        padding: 20px;
+        font-size: .7rem;
+      }
+
+      .card h2 {
+        font-size: .9rem;
+      }
+
+      .card p {
         font-size: 0.9rem;
       }
       .card h2 {
