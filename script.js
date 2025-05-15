@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let sectionHeight = window.innerHeight * 0.8;
     let isScrolling = false;
     let startY = 0;
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active')
 
     ///////////// Carrossel seção inicial
 
@@ -122,4 +127,4 @@ function moverCarrossel(direction) {
 
     const offset = -currentIndex * 100;
     container.style.transform = `translateX(${offset}%)`;
-}
+}})
