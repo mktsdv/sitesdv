@@ -129,39 +129,6 @@ elfsight {
   background-color: #007bff;
 }
 
-
-    @media (max-width: 600px) {
-        .carousel-wrapper {
-            width: 60vw;
-            height: 40vh;
-        }
-      .card h2 {
-        font-size: 1.4rem;
-      }
-
-      .card p {
-        font-size: 0.95rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        padding: 20px;
-        font-size: .7rem;
-      }
-
-      .card h2 {
-        font-size: .9rem;
-      }
-
-      .card p {
-        font-size: 0.9rem;
-      }
-      .card h2 {
-      font-size: 1rem;
-    }
-    }
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -532,10 +499,17 @@ figcaption {
         font-size: .8rem;
     }
 
-    .carrossel {
-        width: 90%;
-        max-height: 70vh;
-    }
+    .carousel-wrapper {
+            width: 60vw;
+            height: 40vh;
+        }
+      .card h2 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
     header {
         height: 10vh;
         width: 100%;
