@@ -62,6 +62,7 @@ elfsight {
       transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s;
       overflow-y: auto;
       display: grid;
+      column-count: 1;
        justify-content: center;
        align-items: center;
     }
