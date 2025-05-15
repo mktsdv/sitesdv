@@ -73,6 +73,7 @@ elfsight {
     .card h2 {
       margin-bottom: 1rem;
       color: #333;
+      font-size: 1.2rem;
     }
 
     .card p, .card ul {
@@ -123,6 +124,9 @@ elfsight {
         padding: 1rem;
         font-size: 0.9rem;
       }
+      .card h2 {
+      font-size: 1rem;
+    }
     }
 
 .flex-container {
