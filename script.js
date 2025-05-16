@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       let currentIndex = 0;
       let autoRotateInterval;
 
-      const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/";
+      const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/carousel/";
 
       async function fetchImageListFromGitHub() {
-        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img";
+        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel/";
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
