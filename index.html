@@ -83,24 +83,18 @@
             </a>
             </div>
         </section>
-        <section id="fotos" class="flex-container">
-            <div class="carrossel">
-                <div class="carrossel-container">
-                    <div class="carrossel-item">
-                        <img src="./img/img (9).webp" alt="Imagem 1"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/img (8).webp" alt="Imagem 2"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/img (6).webp" alt="Imagem 3"><figcaption>Caravana dos Erês - especial de Natal da <a href="https://www.instagram.com/aepaibenedito/" target="_blank" rel="noreferrer noopener">@aepaibenedito</a></figcaption>
-                    </div>
-                    <!-- Adicione mais imagens conforme necessário -->
-                </div>
-                <button class="carrossel-btn prev" onclick="moverCarrossel(-1)">&#10094;</button>
-                <button class="carrossel-btn next" onclick="moverCarrossel(1)">&#10095;</button>
-            </div>
-        </section>
+<section id="fotos" class="flex-container">
+            <div class="carousel-wrapper" id="photo-carousel">
+    <div class="carousel-track" id="carousel-track"></div>
+  </div>
+
+  <div class="controls">
+    <button id="prev">&lt;</button>
+    <button id="next">&gt;</button>
+  </div>
+
+  <div class="dots" id="dots-container"></div>
+</section>
         <section id="projetos" class="flex-container">
             <h1>Nossos Projetos</h1>
             <p>Conheça os projetos sociais que desenvolvemos para impactar positivamente a sociedade.</p>
