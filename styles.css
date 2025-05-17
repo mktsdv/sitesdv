@@ -38,11 +38,27 @@ elfsight {
   overflow: hidden;
 }
 
+.photo-carousel-wrapper {
+  position: relative;
+  width: 70vw;
+  height: 60vh;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 #photo-carousel {
     display: grid;
     column-count: 1;
 }
 .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease;
+    height: 100%;
+    }
+.photo-carousel-track {
     display: flex;
     transition: transform 0.8s ease;
     height: 100%;
