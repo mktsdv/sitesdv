@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Busca lista de imagens do repositório do GitHub
       async function fetchImageListFromGitHub() {
-        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel";
+        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel/";
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
