@@ -1,18 +1,33 @@
-document.addEventListener('DOMContentLoaded', async () => {
-      // Elementos do carrossel
+document.addEventListener('DOMContentLoaded', () => {
+      // === Carrossel de Cards ===
+      const cardTrack = document.getElementById("card-carousel-track");
+      const cardSlides = cardTrack.querySelectorAll(".slide");
+      let cardIndex = 0;
+
+      function updateCardCarousel() {
+        cardTrack.style.transform = `translateX(-${cardIndex * 100}%)`;
+      }
+
+      document.getElementById("prev-card").addEventListener("click", () => {
+        cardIndex = (cardIndex - 1 + cardSlides.length) % cardSlides.length;
+        updateCardCarousel();
+      });
+
+      document.getElementById("next-card").addEventListener("click", () => {
+        cardIndex = (cardIndex + 1) % cardSlides.length;
+        updateCardCarousel();
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // === Carrossel de Fotos ===
+
       const track = document.getElementById("carousel-track");
       const dotsContainer = document.getElementById("dots-container");
-      const zoomModal = document.getElementById("zoom-modal");
-      const zoomImage = document.getElementById("zoom-image");
-      const zoomClose = document.getElementById("zoom-close");
-
       let currentIndex = 0;
       let autoRotateInterval;
-
-      // URL base das imagens
       const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/carousel/";
 
-      // Busca lista de imagens do GitHub
       async function fetchImageListFromGitHub() {
         const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel";
         try {
@@ -27,7 +42,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
       }
 
-      // Embaralha a ordem das imagens
       function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -36,7 +50,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return array;
       }
 
-      // Atualiza o carrossel com base no índice atual
       function updateCarousel(slides, dots) {
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
         dots.forEach((dot, index) => {
@@ -44,20 +57,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
       }
 
-      // Rotaciona o carrossel manualmente ou automaticamente
       function rotateCarousel(slides, dots, direction) {
         currentIndex = (currentIndex + direction + slides.length) % slides.length;
         updateCarousel(slides, dots);
         resetAutoRotate(slides, dots);
       }
 
-      // Reinicia a rotação automática
       function resetAutoRotate(slides, dots) {
         clearInterval(autoRotateInterval);
-        autoRotateInterval = setInterval(() => rotateCarousel(slides, dots, 1), 8000);
+        autoRotateInterval = setInterval(() => rotateCarousel(slides, dots, 1), 10000);
       }
 
-      // Cria slides e dots a partir das imagens carregadas
+      function zoomImage(src) {
+        const overlay = document.createElement("div");
+        overlay.className = "zoom-overlay";
+        const img = document.createElement("img");
+        img.src = src;
+        const closeBtn = document.createElement("button");
+        closeBtn.innerHTML = "&times;";
+        closeBtn.className = "close-zoom";
+        closeBtn.onclick = () => document.body.removeChild(overlay);
+        overlay.appendChild(img);
+        overlay.appendChild(closeBtn);
+        document.body.appendChild(overlay);
+      }
+
       const imageNames = await fetchImageListFromGitHub();
       const shuffledImages = shuffle(imageNames);
 
@@ -67,14 +91,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const img = document.createElement("img");
         img.src = imageBaseUrl + encodeURIComponent(name);
         img.alt = `Foto ${index + 1}`;
+        img.addEventListener("click", () => zoomImage(img.src));
         slide.appendChild(img);
         track.appendChild(slide);
-
-        // Evento de clique para zoom
-        img.addEventListener("click", () => {
-          zoomImage.src = img.src;
-          zoomModal.classList.add("active");
-        });
 
         const dot = document.createElement("span");
         dot.className = "dot";
@@ -82,22 +101,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         dotsContainer.appendChild(dot);
       });
 
-      const slides = document.querySelectorAll(".slide");
-      const dots = document.querySelectorAll(".dot");
+      const slides = document.querySelectorAll(".photo-carousel-track .slide");
+      const dots = document.querySelectorAll(".dots .dot");
 
       resetAutoRotate(slides, dots);
 
-      // Eventos de controle
       const carouselWrapper = document.getElementById("photo-carousel");
       carouselWrapper.addEventListener("mouseenter", () => clearInterval(autoRotateInterval));
       carouselWrapper.addEventListener("mouseleave", () => resetAutoRotate(slides, dots));
 
       document.getElementById("prev").addEventListener("click", () => rotateCarousel(slides, dots, -1));
       document.getElementById("next").addEventListener("click", () => rotateCarousel(slides, dots, 1));
-
-      // Fecha o zoom
-      zoomClose.addEventListener("click", () => {
-        zoomModal.classList.remove("active");
-        zoomImage.src = "";
-      });
     });
