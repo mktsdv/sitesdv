@@ -38,7 +38,7 @@ elfsight {
   overflow: hidden;
 }
 
-.photo-carousel {
+#photo-carousel {
     display: grid;
     column-count: 1;
 }
