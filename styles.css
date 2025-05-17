@@ -40,8 +40,6 @@ elfsight {
 
 .carousel-track {
     display: flex;
-    justify-content: center;
-    align-items: center;
     transition: transform 0.8s ease;
     height: 100%;
     }
