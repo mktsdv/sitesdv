@@ -31,8 +31,8 @@
     </header>
     <main>
         <section id="home">
-		  <div class="carousel-wrapper">
-    <div id="carousel">
+	<div class="carousel-wrapper" id="card-carousel">
+    <div class="carousel-track" id="card-carousel-track">
       <div class="card active">
         <h2>Missão</h2>
         <p>Promover a inclusão social e o desenvolvimento integral de crianças, jovens, adultos e idosos por meio de iniciativas que garantam acesso à educação, cultura, saúde e suporte psicossocial. Nosso compromisso é transformar realidades, fortalecendo vínculos comunitários e proporcionando dignidade, oportunidades e esperança para aqueles que mais necessitam. Com ações inovadoras e sustentáveis, buscamos impactar positivamente a sociedade e construir um futuro mais justo e igualitário.</p>
@@ -56,8 +56,8 @@
   </div>
 
   <div class="controls">
-    <button>&lt;</button>
-    <button>&gt;</button>
+    <button id="prev-card">&lt;</button>
+    <button id="next-card">&gt;</button>
   </div>
 
   <div class="dots">
@@ -69,7 +69,10 @@
         <section id="sobre" class="flex-container">
             <div><h2>Sobre Nós</h2></div>
             <div><img src="./img/logo.webp" height="300px"></div>
-            <div><p>A OSC Saberes da Vida busca promover conhecimento e bem-estar para comunidades em situação de vulnerabilidade.</p></div>
+            <div>
+                <p>Movidos pela força do bem e pelo impacto social, nasceu a SDV - Saberes da Vida, uma organização sem fins lucrativos dedicada à transformação social por meio de ações integradas, ampliando e fortalecendo esse trabalho de anos em prol do social.</p>
+                <p>A OSC Saberes da Vida busca promover conhecimento e bem-estar para comunidades em situação de vulnerabilidade.</p>
+            </div>
         </section>
         <section id="lider" class="flex-container">
             <div>
@@ -85,9 +88,9 @@
         </section>
 <section id="fotos" class="flex-container">
 
-  <div class="carousel-wrapper" id="photo-carousel">
+  <div class="photo-carousel-wrapper" id="photo-carousel">
     <div><h2>Galeria de Fotos</h2></div>
-    <div class="carousel-track" id="carousel-track"></div>
+    <div class="photo-carousel-track" id="carousel-track"></div>
   </div>
 
   <div class="controls">
