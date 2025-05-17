@@ -38,6 +38,10 @@ elfsight {
   overflow: hidden;
 }
 
+.photo-carousel {
+    display: grid;
+    column-count: 1;
+}
 .carousel-track {
     display: flex;
     transition: transform 0.8s ease;
