@@ -37,25 +37,85 @@ elfsight {
   align-items: center;
 }
 
-.slide{
-  position: relative;
-  width: 70vw;
-  height: 50vh;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-    #carousel {
+.carousel-track {
+      display: flex;
+      transition: transform 0.8s ease;
+      height: 100%;
+    }
+    .slide {
+      flex: 1 0 100%;
+      height: 100%;
+    }
+    .slide img {
       width: 100%;
       height: 100%;
-      position: relative;
-      display: flex;
-       justify-content: center;
-       align-items: center;
+      object-fit: cover;
+      border-radius: 16px;
+      cursor: pointer;
     }
-        #carousel-track {
+    .controls, .dots {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .controls button {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      border: none;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background-color: #555;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #bbb;
+    }
+    .dot.active {
+      background: #333;
+    }
+
+    /* Estilo para o modal de zoom */
+    .zoom-modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .zoom-modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .zoom-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+    .zoom-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
+
+    #carousel {
       width: 100%;
       height: 100%;
       position: relative;
