@@ -123,15 +123,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       let currentIndex = 0;
       let autoRotateInterval;
 
-      const imageBaseUrl = "https://github.com/mktsdv/sitesdv/tree/main/img/carousel/";
+      const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/carousel/";
 
       async function fetchImageListFromGitHub() {
-        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel/";
+        const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel";
         try {
           const response = await fetch(apiUrl);
           const data = await response.json();
           return data
-            .filter(file => file.type === "file" && /\.(jpg|png|gif|webp)$/i.test(file.name))
+            .filter(file => file.type === "file" && /\.(jpe?g|png|gif|webp)$/i.test(file.name))
             .map(file => file.name);
         } catch (error) {
           console.error("Erro ao buscar imagens do GitHub:", error);
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const slide = document.createElement("div");
         slide.className = "slide";
         const img = document.createElement("img");
-        img.src = imageBaseUrl + name;
+        img.src = imageBaseUrl + encodeURIComponent(name);
         img.alt = `Foto ${index + 1}`;
         slide.appendChild(img);
         track.appendChild(slide);
