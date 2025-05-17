@@ -1,23 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-      // === Carrossel de Cards ===
-      const cardTrack = document.getElementById("card-carousel-track");
-      const cardSlides = cardTrack.querySelectorAll(".slide");
-      let cardIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  // Seletores do carrossel de Missão, Visão e Valores
+  const slides = document.querySelectorAll("#card-carousel .slide");
+  const dots = document.querySelectorAll("#card-carousel .dot");
+  const prevBtn = document.getElementById("prev-card");
+  const nextBtn = document.getElementById("next-card");
 
-      function updateCardCarousel() {
-        cardTrack.style.transform = `translateX(-${cardIndex * 100}%)`;
-      }
+  let currentIndex = 0;
 
-      document.getElementById("prev-card").addEventListener("click", () => {
-        cardIndex = (cardIndex - 1 + cardSlides.length) % cardSlides.length;
-        updateCardCarousel();
-      });
-
-      document.getElementById("next-card").addEventListener("click", () => {
-        cardIndex = (cardIndex + 1) % cardSlides.length;
-        updateCardCarousel();
-      });
+  function updateCarousel(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
     });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel(currentIndex);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateCarousel(currentIndex);
+    });
+  });
 
     document.addEventListener('DOMContentLoaded', async () => {
       // === Carrossel de Fotos ===
