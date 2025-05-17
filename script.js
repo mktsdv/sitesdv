@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           const response = await fetch(apiUrl);
           const data = await response.json();
           return data
-            .filter(file => file.type === "file" && /\.(jpe?g|png|gif|webp)$/i.test(file.name))
+            .filter(file => file.type === "file" && /\.(jpg|png|gif|webp)$/i.test(file.name))
             .map(file => file.name);
         } catch (error) {
           console.error("Erro ao buscar imagens do GitHub:", error);
