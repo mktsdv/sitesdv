@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       let currentIndex = 0;
       let autoRotateInterval;
 
-      const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/carousel/";
+      const imageBaseUrl = "https://github.com/mktsdv/sitesdv/tree/main/img/carousel/";
 
       async function fetchImageListFromGitHub() {
         const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel/";
