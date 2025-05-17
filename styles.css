@@ -30,7 +30,7 @@ elfsight {
 .carousel-wrapper {
   position: relative;
   width: 70vw;
-  height: 50vh;
+  height: 60vh;
   perspective: 1000px;
   display: flex;
   justify-content: center;
@@ -121,7 +121,7 @@ elfsight {
       height: 100%;
       position: relative;
       display: flex;
-       justify-content: center;
+        justify-content: center;
        align-items: center;
     }
 
