@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentIndex = i;
       updateCarousel(currentIndex);
     });
-  });
+  })
 
     document.addEventListener('DOMContentLoaded', async () => {
       // === Carrossel de Fotos ===
