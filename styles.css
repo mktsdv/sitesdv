@@ -40,9 +40,11 @@ elfsight {
 }
 
 .carousel-track {
-      display: flex;
-      transition: transform 0.8s ease;
-      height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s ease;
+    height: 100%;
     }
     .slide {
       flex: 1 0 100%;
