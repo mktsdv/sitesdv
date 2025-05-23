@@ -16,3 +16,46 @@ h2 { color: #00796B; margin-bottom: 1rem; }
 .project-card { flex: 1; min-width: 280px; }
 footer { background: #eee; padding: 2rem 1rem; text-align: center; font-size: .9rem; }
 a { color: #00796B; text-decoration: none; }
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.menu {
+    min-width: 30vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: line;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: left;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 20px;
+    padding-top: 1em;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #ffcc00;
+}
