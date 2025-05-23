@@ -1,132 +1,101 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Carrossel Missão, Visão e Valores
-  const slides = document.querySelectorAll("#card-carousel .slide");
-  const dots = document.querySelectorAll("#card-carousel .dot");
-  const prevBtn = document.getElementById("prev-card");
-  const nextBtn = document.getElementById("next-card");
+var isOpen = false;
+///////////////// MENU MOBILE
 
-  let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
 
-  function updateCardCarousel(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
-  }
-
-  if (prevBtn && nextBtn && slides.length) {
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCardCarousel(currentIndex);
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active');
     });
 
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCardCarousel(currentIndex);
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    });
+});
+/////////// MODO DESKTOP
+document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main');
+    let isScrolling = false;
+    let sectionHeight = window.innerHeight * 0.8; // 80vh
+
+    // Recalcula a altura da seção quando a janela é redimensionada
+    window.addEventListener('resize', () => {
+        sectionHeight = window.innerHeight * 0.8;
     });
 
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        currentIndex = i;
-        updateCardCarousel(currentIndex);
-      });
+    main.addEventListener('scroll', () => {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        requestAnimationFrame(() => {
+            const scrollPosition = main.scrollTop;
+            const currentSection = Math.round(scrollPosition / sectionHeight);
+
+            main.scrollTo({
+                top: currentSection * sectionHeight,
+                behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 500); // Ajuste o tempo conforme necessário
+        });
     });
-  }
+});
 
-  // Carrossel de Fotos com imagens do GitHub
-  (async () => {
-    const track = document.getElementById("carousel-track");
-    const dotsContainer = document.getElementById("dots-container");
-    const imageBaseUrl = "https://raw.githubusercontent.com/mktsdv/sitesdv/main/img/carousel/";
+//////////// MODO MOBILE
 
-    let currentIndex = 0;
-    let autoRotateInterval;
+document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main');
+    let sectionHeight = window.innerHeight * 0.8; // 80vh
+    let startY = 0; // Posição inicial do toque
+    let isScrolling = false;
 
-    async function fetchImageList() {
-      const apiUrl = "https://api.github.com/repos/mktsdv/sitesdv/contents/img/carousel";
-      try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        return data
-          .filter(file => file.type === "file" && /\.(jpe?g|png|gif|webp)$/i.test(file.name))
-          .map(file => file.name);
-      } catch (error) {
-        console.error("Erro ao buscar imagens:", error);
-        return [];
-      }
-    }
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    function updatePhotoCarousel(slides, dots) {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-      });
-    }
-
-    function rotatePhotoCarousel(slides, dots, direction) {
-      currentIndex = (currentIndex + direction + slides.length) % slides.length;
-      updatePhotoCarousel(slides, dots);
-      resetAutoRotate(slides, dots);
-    }
-
-    function resetAutoRotate(slides, dots) {
-      clearInterval(autoRotateInterval);
-      autoRotateInterval = setInterval(() => rotatePhotoCarousel(slides, dots, 1), 10000);
-    }
-
-    function zoomImage(src) {
-      const overlay = document.createElement("div");
-      overlay.className = "zoom-overlay";
-      const img = document.createElement("img");
-      img.src = src;
-      const closeBtn = document.createElement("button");
-      closeBtn.innerHTML = "&times;";
-      closeBtn.className = "close-zoom";
-      closeBtn.onclick = () => document.body.removeChild(overlay);
-      overlay.appendChild(img);
-      overlay.appendChild(closeBtn);
-      document.body.appendChild(overlay);
-    }
-
-    const imageNames = await fetchImageList();
-    const shuffledImages = shuffle(imageNames);
-
-    shuffledImages.forEach((name, index) => {
-      const slide = document.createElement("div");
-      slide.className = "slide";
-      const img = document.createElement("img");
-      img.src = imageBaseUrl + encodeURIComponent(name);
-      img.alt = `Foto ${index + 1}`;
-      img.addEventListener("click", () => zoomImage(img.src));
-      slide.appendChild(img);
-      track.appendChild(slide);
-
-      const dot = document.createElement("span");
-      dot.className = "dot";
-      if (index === 0) dot.classList.add("active");
-      dotsContainer.appendChild(dot);
+    // Recalcula a altura da seção quando a janela é redimensionada
+    window.addEventListener('resize', () => {
+        sectionHeight = window.innerHeight * 0.8;
     });
 
-    const slides = document.querySelectorAll(".photo-carousel-track .slide");
-    const dots = document.querySelectorAll(".dots .dot");
+    // Detecta o início do toque
+    main.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].clientY; // Armazena a posição Y inicial do toque
+    });
 
-    resetAutoRotate(slides, dots);
+    // Detecta o movimento do toque
+    main.addEventListener('touchmove', (e) => {
+        if (isScrolling) return; // Evita múltiplos eventos de scroll
+        isScrolling = true;
 
-    const carouselWrapper = document.getElementById("photo-carousel");
-    carouselWrapper.addEventListener("mouseenter", () => clearInterval(autoRotateInterval));
-    carouselWrapper.addEventListener("mouseleave", () => resetAutoRotate(slides, dots));
+        const currentY = e.touches[0].clientY; // Posição Y atual do toque
+        const deltaY = startY - currentY; // Diferença entre a posição inicial e atual
 
-    document.getElementById("prev").addEventListener("click", () => rotatePhotoCarousel(slides, dots, -1));
-    document.getElementById("next").addEventListener("click", () => rotatePhotoCarousel(slides, dots, 1));
-  })();
+        // Verifica se o movimento foi significativo (para evitar scrolls acidentais)
+        if (Math.abs(deltaY) > 50) {
+            const scrollPosition = main.scrollTop;
+            const currentSection = Math.round(scrollPosition / sectionHeight);
+
+            // Determina a direção do scroll (para cima ou para baixo)
+            if (deltaY > 0 && currentSection < main.children.length - 1) {
+                // Scroll para a próxima seção
+                main.scrollTo({
+                    top: (currentSection + 1) * sectionHeight,
+                    behavior: 'smooth'
+                });
+            } else if (deltaY < 0 && currentSection > 0) {
+                // Scroll para a seção anterior
+                main.scrollTo({
+                    top: (currentSection - 1) * sectionHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Reseta o estado de scrolling após um pequeno intervalo
+        setTimeout(() => {
+            isScrolling = false;
+        }, 500); // Ajuste o tempo conforme necessário
+    });
 });
