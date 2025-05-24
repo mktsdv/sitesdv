@@ -26,27 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Ajusta altura de cada section
-  const setSectionHeights = () => {
-    const height = window.innerHeight;
-    sections.forEach(section => {
-      section.style.height = height + "px";
-    });
+  // Ajusta a altura de cada seção
+  const setHeights = () => {
+    const vh = window.innerHeight;
+    sections.forEach(section => section.style.height = `${vh}px`);
   };
+
+  window.addEventListener("resize", setHeights);
+  setHeights();
+});
 
   setSectionHeights();
   window.addEventListener("resize", setSectionHeights);
-  
+
   let currentIndex = 0;
   let isThrottled = false;
 
-  container.addEventListener("wheel", (event) => {
+  document.addEventListener("wheel", (e) => {
     if (isThrottled) return;
     isThrottled = true;
 
-    setTimeout(() => {
-      isThrottled = false;
-    }, 800); // evita scrolls múltiplos
+    setTimeout(() => isThrottled = false, 800);
+
+    const direction = e.deltaY > 0 ? 1 : -1;
+    scrollToSection(currentIndex + direction);
+  });
+
 
     const direction = event.deltaY > 0 ? 1 : -1;
     currentIndex = Math.min(Math.max(currentIndex + direction, 0), sections.length - 1);

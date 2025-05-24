@@ -12,6 +12,7 @@ html, body {
     align-items: center;
     justify-content: center;
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
     background: #fff; 
     color: #333; 
     line-height: 1.6; }
