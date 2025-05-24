@@ -60,9 +60,6 @@ section {
     align-content: space-between;
     text-align: center;
     font-size: 1.5em;
-    color: white;
-    padding-top: 20vh;
-    padding-bottom: 5vh;
     overflow: hidden;
     scroll-snap-align: start;
     color: white; 
@@ -178,6 +175,7 @@ main {
     scrollbar-width: none;
     color: black;
     padding-top: 20vh;
+    padding-bottom: 5vh;
     align-items: center;  
     justify-content: center;
 }
