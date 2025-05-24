@@ -86,7 +86,7 @@ h2 {
 .project-card { flex: 1; min-width: 280px; }
 
 footer { 
-    height: 5vh;
+    height: 10vh;
     width: 100%;
     background: #eee; 
     padding: 2rem 1rem; 
@@ -165,7 +165,7 @@ form {
 }
 
 main {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
