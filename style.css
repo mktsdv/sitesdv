@@ -12,6 +12,7 @@ html, body {
     align-items: center;
     justify-content: center;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
     background: #fff; 
     color: #333; 
@@ -176,6 +177,9 @@ main {
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
     color: black;
+    padding-top: 20vh;
+    align-items: center;  
+    justify-content: center;
 }
 
 main.container {
@@ -183,7 +187,6 @@ main.container {
   width: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  padding-top: 20vh;
 }
 
 main.container section {
@@ -192,8 +195,6 @@ main.container section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;  
-  justify-content: center;
 }
 
 main p {
