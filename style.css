@@ -173,7 +173,7 @@ main {
 }
 
 main.container {
-  height: 100vh;
+  height: 70vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
