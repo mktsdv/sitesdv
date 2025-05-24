@@ -213,6 +213,15 @@ main p {
   color: #333;
 }
 
+.elemento::-webkit-scrollbar { /* Chrome, Safari, Edge */
+  display: none;
+}
+
+.elemento {
+  -ms-overflow-style: none; /* Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .menu-icon {
