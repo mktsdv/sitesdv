@@ -29,7 +29,10 @@ header {
   top: 0;
   z-index: 1000;
 }
-
+header .linhas {
+  display: flex;
+  flex-direction: column;
+}
 header #linha1,
 header #linha2 {
   display: flex;
