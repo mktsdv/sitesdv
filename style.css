@@ -34,7 +34,7 @@ h2 {
 
 .bio, .mission, .projects { display: flex; flex-wrap: wrap; gap: 2rem; }
 
-.home img { width: 600px; height: 600px; }
+.home img { width: 600px; height: 600px; object-fit: cover; }
 
 .bio img { border-radius: 100%; width: 600px; height: 600px; object-fit: cover; }
 
