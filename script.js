@@ -26,6 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Ajusta altura de cada section
+  const setSectionHeights = () => {
+    const height = window.innerHeight;
+    sections.forEach(section => {
+      section.style.height = height + "px";
+    });
+  };
+
+  setSectionHeights();
+  window.addEventListener("resize", setSectionHeights);
+  
   let currentIndex = 0;
   let isThrottled = false;
 
