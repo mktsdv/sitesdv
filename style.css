@@ -71,10 +71,13 @@ h2 {
 .project-card { flex: 1; min-width: 280px; }
 
 footer { 
+    height: 5vh;
+    width: 100%;
     background: #eee; 
     padding: 2rem 1rem; 
     text-align: center; 
-    font-size: .9rem; }
+    font-size: .9rem;
+    position: fixed; }
 
 a { 
     color: #00796B; 
