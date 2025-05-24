@@ -161,6 +161,7 @@ main.container section {
 }
 
 #title{
+    color: #f0f0f0;
     min-width: 30vw;
     text-align: center;
 }
