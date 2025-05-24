@@ -195,6 +195,10 @@ main.container section {
   justify-content: center;
 }
 
+main p {
+    color: #333;
+}
+
 #logo {
     padding: .5rem;
     width: 80px;
