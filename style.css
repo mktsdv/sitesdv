@@ -178,7 +178,15 @@ main.container section {
   }
 
   header {
-    position: fixed;
+        height: 10vh;
+        width: 100%;
+        background-color: #00796B;
+        color: white;
+        display: flex;
+        flex-direction: line;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
   }
 
   .home img { max-width: 80vw; object-fit: cover; justify-content: center; }
