@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("menu");
   const links = menu.querySelectorAll("a");
 
+  // Menu hambúrguer
   menuIcon.addEventListener("click", () => {
     menu.classList.toggle("show");
   });
@@ -19,39 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Fecha o menu após clique em mobile
       if (window.innerWidth <= 600) {
         menu.classList.remove("show");
       }
     });
   });
 
-  // Ajusta a altura de cada seção
-  const setHeights = () => {
+  // Ajusta a altura de cada section para 100vh
+  const setSectionHeights = () => {
     const vh = window.innerHeight;
     sections.forEach(section => section.style.height = `${vh}px`);
   };
 
-  window.addEventListener("resize", setHeights);
-  setHeights();
-});
-
-  setSectionHeights();
   window.addEventListener("resize", setSectionHeights);
+  setSectionHeights();
 
+  // Scroll controlado
   let currentIndex = 0;
   let isThrottled = false;
 
-  document.addEventListener("wheel", (e) => {
+  document.addEventListener("wheel", (event) => {
     if (isThrottled) return;
     isThrottled = true;
 
     setTimeout(() => isThrottled = false, 800);
-
-    const direction = e.deltaY > 0 ? 1 : -1;
-    scrollToSection(currentIndex + direction);
-  });
-
 
     const direction = event.deltaY > 0 ? 1 : -1;
     currentIndex = Math.min(Math.max(currentIndex + direction, 0), sections.length - 1);
