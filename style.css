@@ -178,6 +178,8 @@ main.container section {
   }
 
   header {
-    position: relative;
+    position: fixed;
   }
+
+  .home img { max-width: 80vw; object-fit: cover; justify-content: center; }
 }
