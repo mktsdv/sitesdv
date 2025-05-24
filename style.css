@@ -39,6 +39,7 @@ header #linha2 {
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
+  font-size: 1rem;
 }
 
 header h1 {
@@ -172,7 +173,6 @@ a {
 
 .menu li {
   margin-left: 20px;
-  padding-top: 1em;
 }
 
 .menu li a {
