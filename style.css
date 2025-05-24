@@ -192,6 +192,7 @@ main.container section {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;  
   justify-content: center;
 }
 
