@@ -34,10 +34,17 @@ header .linhas {
   display: flex;
   flex-direction: column;
 }
-header #linha1,
-header #linha2 {
+header #linha1 {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+header #linha2 {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-around;
   font-size: 1rem;
