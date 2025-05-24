@@ -160,6 +160,11 @@ main.container section {
     width: 80px;
 }
 
+#title{
+    min-width: 30vw;
+    text-align: center;
+}
+
 @media (max-width: 600px) {
   .menu-icon {
     display: flex;
