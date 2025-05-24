@@ -45,8 +45,9 @@ header #linha2 {
     width: 100%;
 }
 
-header h1 {font-size: 2rem; 
+header h1 {font-size: 1rem; 
     color: #f0f0f0;
+    align-items: center;
 }
 
 .container { max-width: 960px; margin: auto; padding: 2rem 1rem; }
