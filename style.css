@@ -42,7 +42,9 @@ header #linha2 {
     flex-direction: row;
 }
 
-header h1 {font-size: 2rem; }
+header h1 {font-size: 2rem; 
+    color: #f0f0f0;
+}
 
 .container { max-width: 960px; margin: auto; padding: 2rem 1rem; }
 
