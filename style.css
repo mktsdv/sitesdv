@@ -47,7 +47,7 @@ header #linha2 {
 
 header h1 {font-size: 1rem; 
     color: #f0f0f0;
-    align-items: center;
+    justify-content: center;
 }
 
 .container { max-width: 960px; margin: auto; padding: 2rem 1rem; }
@@ -102,7 +102,7 @@ footer {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    justify-content: center; }
 
 a { 
     color: #00796B; 
