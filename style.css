@@ -270,6 +270,25 @@ main p {
   footer p {
     font-size: 0.6rem;
   }
+  
+  main, main.container {
+  width: 100%;
+  height: calc(100vh - 17vh);
+  padding-top: 10vh;
+  padding-bottom: 7vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+  main.container section {
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
   #logo {
   padding: .5rem;
