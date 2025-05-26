@@ -279,7 +279,7 @@ main p {
   .home img,
   .bio img {
     width: 300px;
-    height: auto;
+    height: 300px;
   }
 
   .bio {
