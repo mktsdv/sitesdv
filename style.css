@@ -83,6 +83,7 @@ section {
 h2 {
   color: #00796B;
   margin-bottom: 1rem;
+  font-family: "Indie Flower", cursive;
 }
 
 .bio, .mission, .projects {
