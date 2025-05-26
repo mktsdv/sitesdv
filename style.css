@@ -115,7 +115,11 @@ h2 {
   gap: 2rem;
 }
 
-.home img,
+.home img{
+    width: 400px;
+    max-height: 400px;
+}
+
 .biografia img {
     width: 400px;
     max-height: 400px;
@@ -300,11 +304,15 @@ main p {
   width: 80px;
   }
 
-  .home img,
-  .biografia img {
-    width: 33%;
-    max-height: 33%;
-  }
+.home img{
+    width: 25rem;
+    max-height: 300px;
+}
+
+.biografia img {
+    width: 10rem;
+    max-height: 300px;
+}
 
   .biografia {
     flex-direction: column;
