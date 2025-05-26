@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       current = (current + 1) % images.length;
       images[current].classList.add("active");
     }, 3000); // troca a cada 3 segundos
-  });
+  
 
   // Menu hambúrguer
   menuIcon.addEventListener("click", () => {
