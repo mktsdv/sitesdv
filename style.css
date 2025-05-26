@@ -294,4 +294,7 @@ main p {
   .bio {
     flex-direction: column;
   }
+  .mission {
+    flex-direction: column;
+  }
 }
