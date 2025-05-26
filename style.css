@@ -13,29 +13,52 @@ html, body {
   background: #fff;
   color: #333;
   line-height: 1.6;
-  font: 1rem;
+  font-size: 1rem;
 }
 
+/* HEADER */
 header {
-  background: #00796B;
-  color: white;
-  height: 17vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
+  width: 100%;
+  height: 17vh;
+  background: #00796B;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
+  padding: 0 1rem;
 }
 
 header #linha1 {
   display: flex;
-  flex-direction: row;
-  width: 100%;
   justify-content: space-around;
+  width: 100%;
   font-size: 1rem;
+}
+
+header h2 {
+  font-size: 2rem;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
 }
 
 footer #linha2 {
@@ -46,29 +69,24 @@ footer #linha2 {
   font-size: 1rem;
 }
 
-header h2 {
-  font-size: 2rem;
-  color: whitesmoke;
-  text-align: center;
-}
-
-
+/* MAIN */
 main, main.container {
   width: 100%;
   height: calc(100vh - 27vh);
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   padding-top: 17vh;
   padding-bottom: 10vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 
 main.container section {
   scroll-snap-align: start;
   width: 100%;
+  min-height: calc(100vh - 27vh);
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 section {
@@ -83,6 +101,7 @@ h2 {
   font-family: "Indie Flower", cursive;
 }
 
+/* LAYOUTS */
 .bio, .mission, .projects {
   display: flex;
   flex-wrap: wrap;
@@ -91,11 +110,11 @@ h2 {
 
 .home #img,
 .bio #img {
-    display: flex;
   width: 40%;
-  object-fit: cover;
+  display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
 }
 
 .bio img {
@@ -108,8 +127,8 @@ h2 {
 
 .icons {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .icons div {
@@ -133,32 +152,36 @@ h2 {
   min-width: 280px;
 }
 
-footer {
-  height: 10vh;
-  width: 100%;
-  background: #eee;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: .9rem;
-  position: fixed;
-  bottom: 0;
+/* FORMULÁRIO */
+form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 50%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   align-items: center;
 }
 
+/* LINKS */
 a {
   color: #00796B;
   text-decoration: none;
 }
 
+.menu li a:hover {
+  color: #ffcc00;
+}
+
+/* MENU */
 .menu-icon {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 6px;
-  padding: 10px 1em 0 0;
+  padding: 1em;
 }
 
 .menu-icon .bar {
@@ -170,10 +193,10 @@ a {
 }
 
 .menu {
-  min-width: 30vw;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  min-width: 30vw;
   list-style: none;
   justify-content: space-evenly;
   align-items: center;
@@ -189,22 +212,7 @@ a {
   display: block;
 }
 
-.menu li a:hover {
-  color: #ffcc00;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  max-width: 600px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  align-items: center;
-}
-
+/* OUTROS */
 #logo {
   padding: .5rem;
   width: 120px;
@@ -221,13 +229,13 @@ main p {
   font-size: 1.2rem;
 }
 
-.elemento::-webkit-scrollbar { /* Chrome, Safari, Edge */
+/* ESCONDER SCROLL */
+.elemento::-webkit-scrollbar {
   display: none;
 }
-
 .elemento {
-  -ms-overflow-style: none; /* Internet Explorer */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* RESPONSIVO */
@@ -255,22 +263,18 @@ main p {
 
   header {
     height: 10vh;
+    padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem;
   }
 
-  .home img {
-    max-width: 80vw;
-  }
-
-  bio {
-    display: flex;
-    flex-direction: column;
-  }
-
+  .home img,
   .bio img {
-    width: 80vw;
+    max-width: 80vw;
     height: auto;
+  }
+
+  .bio {
+    flex-direction: column;
   }
 }
