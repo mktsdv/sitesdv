@@ -5,7 +5,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: 100vh;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   overflow-y: scroll;
@@ -273,7 +273,7 @@ main p {
   
   main, main.container {
   width: 100%;
-  height: calc(100vh - 17vh);
+  height: 100%;
   padding-top: 10vh;
   padding-bottom: 7vh;
   overflow-y: auto;
@@ -281,7 +281,8 @@ main p {
 }
 
   main.container section {
-  height: 100%;
+  
+  height: calc(100vh - 17vh);
   scroll-snap-align: start;
   scroll-margin-top: 10vh;
   display: flex;
