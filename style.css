@@ -267,6 +267,11 @@ main p {
     flex-direction: row;
     justify-content: space-between;
   }
+  
+  #logo {
+  padding: .5rem;
+  width: 80px;
+  }
 
   .home img,
   .bio img {
