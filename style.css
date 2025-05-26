@@ -218,6 +218,7 @@ form {
 
 main p {
   color: #333;
+  font-size: 1.2rem;
 }
 
 .elemento::-webkit-scrollbar { /* Chrome, Safari, Edge */
