@@ -106,18 +106,18 @@ h2 {
 }
 
 /* LAYOUTS */
-.bio, .mission, .projects {
+.biografia, .mission, .projects {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .home img,
-.bio img {
+.biografia img {
     width: 400px;
 }
 
-.bio img {
+.biografia img {
   border-radius: 50%;
 }
 
@@ -296,12 +296,12 @@ main p {
   }
 
   .home img,
-  .bio img {
+  .biografia img {
     width: 300px;
     height: 300px;
   }
 
-  .bio {
+  .biografia {
     flex-direction: column;
   }
   .mission {
