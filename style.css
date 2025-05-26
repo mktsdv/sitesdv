@@ -81,6 +81,8 @@ main, main.container {
   padding-bottom: 10vh;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  align-items: center;
+  justify-content: center;
 }
 
 main.container section {
