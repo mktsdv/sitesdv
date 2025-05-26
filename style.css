@@ -271,7 +271,15 @@ main p {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  footer {
+    height: 10vh;
+  }
   
+  footer p {
+    font-size: 0.9rem;
+  }
+
   #logo {
   padding: .5rem;
   width: 80px;
