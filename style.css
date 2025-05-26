@@ -44,6 +44,10 @@ header h2 {
   text-align: center;
 }
 
+header #title {
+    align-items: center;
+}
+
 /* FOOTER */
 footer {
   position: fixed;
