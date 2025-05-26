@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector("main.container");
   const sections = container.querySelectorAll("section");
@@ -10,11 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.toggle("show");
   });
 
+  // Navegação suave pelos links do menu
   links.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetId = link.getAttribute("href").replace("#", "");
-      const targetSection = document.querySelector(.${targetId}, #${targetId})
+      const targetSection = document.querySelector(`.${targetId}, #${targetId}`);
 
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
@@ -26,16 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Ajusta a altura de cada section para 100vh
-  const setSectionHeights = () => {
-    const vh = window.innerHeight;
-    sections.forEach(section => section.style.height = ${vh}px);
-  };
-
-  window.addEventListener("resize", setSectionHeights);
-  setSectionHeights();
-
-  // Scroll controlado
+  // Scroll entre seções com controle de índice
   let currentIndex = 0;
   let isThrottled = false;
 
