@@ -89,10 +89,9 @@ h2 {
   gap: 2rem;
 }
 
-.home img,
-.bio img {
-  width: 600px;
-  height: 600px;
+.home #img,
+.bio #img {
+  width: 40%;
   object-fit: cover;
 }
 
