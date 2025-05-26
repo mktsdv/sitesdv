@@ -19,7 +19,7 @@ html, body {
 header {
   background: #00796B;
   color: white;
-  height: 20vh;
+  height: 17vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -29,10 +29,7 @@ header {
   top: 0;
   z-index: 1000;
 }
-header .linhas {
-  display: flex;
-  flex-direction: column;
-}
+
 header #linha1 {
   display: flex;
   flex-direction: row;
@@ -49,11 +46,12 @@ footer #linha2 {
   font-size: 1rem;
 }
 
-header h1 {
+header h2 {
   font-size: 1rem;
-  color: #f0f0f0;
+  color: whitesmoke;
   text-align: center;
 }
+
 
 main, main.container {
   width: 100%;
@@ -84,10 +82,6 @@ h2 {
   color: #00796B;
   margin-bottom: 1rem;
   font-family: "Indie Flower", cursive;
-}
-
-h2 #title {
-    color: antiquewhite;
 }
 
 .bio, .mission, .projects {
