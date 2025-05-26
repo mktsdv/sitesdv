@@ -112,15 +112,6 @@ h2 {
   gap: 2rem;
 }
 
-.home #img,
-.bio #img {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-}
-
 .home img,
 .bio img {
     max-width: 400px;
