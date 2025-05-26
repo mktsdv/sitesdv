@@ -112,7 +112,7 @@ h2 {
 .biografia, .mission, .projects {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  margin: 30px;
 }
 
 .home img{
@@ -151,10 +151,6 @@ h2 {
   border-radius: 8px;
 }
 
-.project-card {
-  flex: 1;
-  min-width: 280px;
-}
 
 /* FORMULÁRIO */
 form {
