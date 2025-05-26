@@ -118,6 +118,7 @@ h2 {
 .home img,
 .biografia img {
     width: 400px;
+    max-height: 400px;
 }
 
 .biografia img {
