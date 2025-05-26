@@ -93,7 +93,7 @@ main.container section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
+  margin: 0 25px;
 }
 
 section {
@@ -104,7 +104,6 @@ section {
 
 h2 {
   color: #00796B;
-  margin-bottom: 1rem;
   font-family: "Indie Flower", cursive;
 }
 
@@ -112,7 +111,6 @@ h2 {
 .biografia, .mission, .projects {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px;
 }
 
 .home img{
@@ -310,7 +308,6 @@ main p {
 }
 
   main.container section {
-  
   height: calc(100vh - 17vh);
   scroll-snap-align: start;
   scroll-margin-top: 10vh;
@@ -318,6 +315,7 @@ main p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 30px
 }
 
   #logo {
