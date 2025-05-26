@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetId = link.getAttribute("href").replace("#", "");
-      const targetSection = document.querySelector(.${targetId}, #${targetId});
+      const targetSection = document.querySelector(.${targetId}, #${targetId})
 
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
