@@ -125,10 +125,6 @@ h2 {
   border-radius: 50%;
 }
 
-.bio div {
-  flex: 1;
-}
-
 .icons {
   display: flex;
   flex-wrap: wrap;
