@@ -180,7 +180,7 @@ a {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 6px;
+  gap: 3px;
   padding: 1em;
 }
 
