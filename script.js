@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetId = link.getAttribute("href").replace("#", "");
-      const targetSection = document.querySelector(`.${targetId}, #${targetId}`);
+      const targetSection = document.querySelector(.${targetId}, #${targetId});
 
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
@@ -28,11 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ajusta a altura de cada section para 100vh
   const setSectionHeights = () => {
-  const usableHeight = window.innerHeight * 0.73; // 100vh - 17vh (header) - 10vh (footer)
-  sections.forEach(section => {
-    section.style.height = `${usableHeight}px`;
-  
-};
+    const vh = window.innerHeight;
+    sections.forEach(section => section.style.height = ${vh}px);
+  };
 
   window.addEventListener("resize", setSectionHeights);
   setSectionHeights();
