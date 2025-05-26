@@ -301,8 +301,8 @@ main p {
 
   .home img,
   .biografia img {
-    width: 300px;
-    height: 300px;
+    width: 33%
+    height: 33%;
   }
 
   .biografia {
