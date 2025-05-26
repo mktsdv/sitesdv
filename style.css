@@ -47,7 +47,7 @@ footer #linha2 {
 }
 
 header h2 {
-  font-size: 1rem;
+  font-size: 2rem;
   color: whitesmoke;
   text-align: center;
 }
@@ -258,6 +258,11 @@ main p {
 
   .home img {
     max-width: 80vw;
+  }
+
+  bio {
+    display: flex;
+    flex-direction: column;
   }
 
   .bio img {
