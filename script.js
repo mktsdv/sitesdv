@@ -27,15 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Ajusta a altura de cada section para 100vh
-  ////const setSectionHeights = () => {
-  ////const usableHeight = window.innerHeight * 0.73; // 100vh - 17vh (header) - 10vh (footer)
-  ////sections.forEach(section => {
-  ////  section.style.height = `${usableHeight}px`;
-  ////});
-////};
+  const setSectionHeights = () => {
+  const usableHeight = window.innerHeight * 0.73; // 100vh - 17vh (header) - 10vh (footer)
+  sections.forEach(section => {
+    section.style.height = `${usableHeight}px`;
+  
+};
 
-  ////window.addEventListener("resize", setSectionHeights);
-  ////setSectionHeights();
+  window.addEventListener("resize", setSectionHeights);
+  setSectionHeights();
 
   // Scroll controlado
   let currentIndex = 0;
