@@ -184,7 +184,6 @@ a {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 3px;
   padding: 1em;
 }
 
@@ -267,7 +266,7 @@ main p {
 
   header {
     height: 10vh;
-    padding: 1rem;
+    padding: 1rem 0;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -277,7 +276,7 @@ main p {
   }
   
   footer p {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   #logo {
