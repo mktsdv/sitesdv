@@ -118,7 +118,7 @@ h2 {
 
 .home img,
 .bio img {
-    max-width: fit-content;
+    max-width: 600px;
 }
 
 .bio img {
