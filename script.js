@@ -5,6 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuIcon = document.getElementById("menu-icon");
   const menu = document.getElementById("menu");
   const links = menu.querySelectorAll("a");
+  const images = document.querySelectorAll(".gallery-img");
+    let current = 0;
+
+    setInterval(() => {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 3000); // troca a cada 3 segundos
+  });
 
   // Menu hambúrguer
   menuIcon.addEventListener("click", () => {
