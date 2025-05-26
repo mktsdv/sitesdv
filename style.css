@@ -123,15 +123,11 @@ h2 {
 
 .home img,
 .bio img {
-    max-width: 600px;
+    max-width: 400px;
 }
 
 .bio img {
   border-radius: 50%;
-}
-
-.bio div {
-  flex: 1;
 }
 
 .icons {
