@@ -76,7 +76,7 @@ footer #linha2 {
 /* MAIN */
 main, main.container {
   width: 100%;
-  height: calc(100vh - 27vh);
+  height: 100%;
   padding-top: 17vh;
   padding-bottom: 10vh;
   overflow-y: auto;
