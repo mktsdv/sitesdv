@@ -1,113 +1,103 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <title>Saberes da Vida</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <img id="logo" src="./img/logo.webp" alt="Logo Saberes da Vida">
-    <div id="title"><h2>Saberes da Vida</h2></div>
-    <div id="navmenu">
-      <nav>
-        <div class="menu-icon" id="menu-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <ul class="menu" id="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#lider">Liderança</a></li>
-          <li><a href="#fotos">Fotos</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <img id="logo" src="./img/logo.webp" alt="Logo Saberes da Vida">
     </div>
+
+    <div id="linha1">      
+     <div id="title"><h2>Saberes da Vida</h2></div>
+      <div id="navmenu">
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul class="menu" id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#biografia">Liderança</a></li>
+            <li><a href="#about">Sobre Nós</a></li>
+            <li><a href="#mission">Nossa Missão</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#instagram">Redes Sociais</a></li>
+          </ul>
+        </nav>
+    </div>
+    </div>
+    
+    
   </header>
 
-  <main>
-    <section id="home">
-      <div class="carousel-wrapper" id="card-carousel">
-        <div class="carousel-track" id="card-carousel-track">
-          <div class="slide active">
-            <h2>Missão</h2>
-            <p>Promover a inclusão social e o desenvolvimento integral de crianças, jovens, adultos e idosos...</p>
-          </div>
-          <div class="slide">
-            <h2>Visão</h2>
-            <p>Ser referência nacional em projetos sociais que transformam vidas e promovem a equidade...</p>
-          </div>
-          <div class="slide">
-            <h2>Valores</h2>
-            <ul>
-              <li><strong>Solidariedade</strong> – Acreditamos na força do coletivo e no poder da união.</li>
-              <li><strong>Respeito</strong> – Valorizamos a diversidade e a dignidade humana.</li>
-              <li><strong>Compromisso Social</strong> – Atuamos com responsabilidade e ética.</li>
-              <li><strong>Empatia</strong> – Colocamo-nos no lugar do outro, promovendo acolhimento.</li>
-              <li><strong>Transformação</strong> – Utilizamos educação e cultura para a mudança social.</li>
-              <li><strong>Transparência</strong> – Mantemos uma gestão clara e aberta.</li>
-            </ul>
-          </div>
+  <main class="container">
+    <section class="home">
+      <div id="img"><img src="./img/logo.webp"></div>
+    </section>
+    <section class="biografia">
+      <div>
+        <h2>Sobre o Fundador</h2>
+        <div id="photo"><img src="./img/fabiano.webp" alt="Fabiano Alcântara"></div>
+        <div id="bio">
+        <p>Fabiano Alcântara Alves nasceu em Santa Maria do Suaçuí/MG. Desde cedo, desenvolveu um olhar atento às necessidades sociais, liderando campanhas e criando oportunidades para jovens e famílias em situação de vulnerabilidade.</p>
+        <p>Seu inconformismo e vontade de mudar realidades fez com que liderasse campanhas de arrecadação para famílias em situação de vulnerabilidade e criasse oportunidade para jovens através de programas locais.</p></div>
+        <p>Ajudou jovens a se profissionalizarem, participando de eventos filantrópicos e culturais, aproximando-o ainda mais de comunidades carentes e possibilitando trocas reais para compreender as necessidades individuais e coletivas de cada comunidade.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div>
+        <h2>Quem Somos</h2>
+        <p>A SDV nasceu pela idealização do Fabiano para criar e implementar projetos sociais que promovem o desenvolvimento de uma sociedade igualitária, valorizando condições de dignidade, direitos humanos e oportunidades, sem distinção ou qualquer segregação. A SDV investe em ações sociais com o apoio de parcerias públicas e privadas em localizações estratégicas, impactando realidades e transformando o presente e o futuro de crianças, jovens, adultos e idosos.</p>
+        <h2>Nossa Sede</h2>
+        <p>Localizada à rua Viamão, 1033 - Belo Horizonte/MG. Espaço acolhedor para oficinas culturais, planejamento de projetos e ações solidárias.</p>
+      </div>
+      </section>
+    <section class="mission">
+      <div class="icons">
+        <div>
+          <h2>Missão</h2>
+          <p>Promover a inclusão e o desenvolvimento integral por meio de educação, cultura, saúde e suporte psicossocial.</p>
+        </div>
+        <div>
+          <h2>Visão</h2>
+          <p>Ser referência nacional em projetos sociais que promovem equidade e transformam vidas.</p>
+        </div>
+        <div>
+          <h2>Valores</h2>
+          <p>Solidariedade, Respeito, Compromisso Social, Empatia, Transformação e Transparência.</p>
         </div>
       </div>
-      <div class="controls">
-        <button id="prev-card">&lt;</button>
-        <button id="next-card">&gt;</button>
-      </div>
-      <div class="dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
     </section>
 
-    <section id="sobre" class="flex-container">
-      <div><h2>Sobre Nós</h2></div>
-      <div><img src="./img/logo.webp" height="300" alt="Logo Saberes da Vida"></div>
-      <div>
-        <p>Movidos pela força do bem e pelo impacto social, nasceu a SDV - Saberes da Vida...</p>
-        <p>A OSC Saberes da Vida busca promover conhecimento e bem-estar para comunidades...</p>
+    <section class="projects">
+      <div class="project-card">
+        <h2>Projetos</h2>
+        <h2>Mais Terra, Menos Tela</h2>
+        <p>Educação ambiental, horticultura e alimentação saudável para crianças e idosos, promovendo inclusão e redução do uso excessivo de eletrônicos.</p>
       </div>
-    </section>
+      <div class="image-gallery">
+      <img src="./img/carousel/img1.jpg" class="gallery-img active" alt="Imagem 1">
+      <img src="./img/carousel/img2.jpg" class="gallery-img" alt="Imagem 2">
+      <img src="./img/carousel/img3.jpg" class="gallery-img" alt="Imagem 3">
+      <img src="./img/carousel/img4.jpg" class="gallery-img" alt="Imagem 4">
+</div>
 
-    <section id="lider" class="flex-container">
-      <div>
-        <h2>TRANSFORMAÇÃO E PROPÓSITO:</h2>
-        <h1>DA OPORTUNIDADE QUE TIVE... À MUDANÇAS DE OUTRAS VIDAS!</h1>
-      </div>
-      <div id="lider-resumo" class="flex-row">
-        <p id="bio">Fabiano Alcançara Alves nasceu em Santa Maria do Suaçuí...</p>
-        <a href="https://www.instagram.com/fabiano020276/" target="_blank" rel="noreferrer noopener" id="photo">
-          <img src="./img/fabiano.webp" id="photo-lider" alt="Foto do Fabiano">
-        </a>
-      </div>
-    </section>
-
-    <section id="fotos" class="flex-container">
-      <div class="photo-carousel-wrapper" id="photo-carousel">
-        <div><h2>Galeria de Fotos</h2></div>
-        <div class="photo-carousel-track" id="carousel-track"></div>
-      </div>
-      <div class="controls">
-        <button id="prev">&lt;</button>
-        <button id="next">&gt;</button>
-      </div>
-      <div class="dots" id="dots-container"></div>
-    </section>
-
-    <section id="projetos" class="flex-container">
-      <h1>Siga nosso Projeto no Instagram</h1>
-      <p>Conheça os projetos sociais que desenvolvemos para impactar positivamente a sociedade.</p>
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div id="elfsight" class="elfsight-app-756b7bc5-9bc8-4b63-9bcb-1740b054d94f" data-elfsight-app-lazy></div>
     </section>
 
     <section id="contato">
+    <div>
       <h2>Fale Conosco</h2>
       <form action="https://formspree.io/f/xanqogrp" method="POST">
         <label for="nome">Nome:</label>
@@ -120,17 +110,32 @@
         <textarea id="mensagem" name="mensagem" required></textarea>
 
         <button type="submit">Enviar</button>
-      </form>
+      </form><br>
+    </div>
+    <div>
+      <h2>Como Ajudar?</h2>
+      <p>Pessoas físicas e jurídicas podem apoiar com:</p>
+        <p>> Patrocínio de projetos</p>
+        <p>> Voluntariado corporativo</p>
+        <p>> Apoio institucional</p>
+      <br>
+      <p>Entre em contato: <a href="https://wa.me/5531975376458">(31) 97537-6458</a> · <a href="https://saberesdavida.com.br">saberesdavida.com.br</a></p>
+    </div>
+    </section>
+
+    <section id="instagram">
+      <h2>Siga-nos no Instagram</h2>
+      <iframe src="https://www.instagram.com/saberesdavida.sdv/embed" width="100%" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
     </section>
   </main>
 
   <footer>
-    <p>
-      2025 Saberes da Vida 🌳📖 Todos os direitos reservados. &copy; Criado por
-      <a href="https://www.instagram.com/tomcapilla/" target="_blank" rel="noreferrer noopener">
-        <i>@tomcapilla</i>
-      </a>
-    </p>
+    <div>
+      <em><p>Transformar vidas despertando o que há de melhor em cada ser</p></em>
+    </div>
+    <div>
+    <p>© Saberes da Vida - Todos os direitos reservados.</p>  
+    </div>
   </footer>
 </body>
 </html>
